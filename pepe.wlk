@@ -25,7 +25,7 @@ object pepe {
     method cambiarCategoría(_categoría){
 		categoria = _categoría
 	}
-
+ // VER SETTER 
 	method cambiarBonoPorPresentismo_(_presentismo){
 		bonoPresentismo = _presentismo
 	}
@@ -41,7 +41,7 @@ object pepe {
     
 
 	method sueldo() {
-		return self.sueldoNeto() + bonoPresentismo + bonoResultado 
+		return self.sueldoNeto() + bonoPresentismo.monto(self) + bonoResultado.monto(self) 
 			/* + el bono por presentismo */
 			/* + el bono por resultado */
 		
